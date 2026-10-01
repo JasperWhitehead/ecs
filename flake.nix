@@ -35,8 +35,8 @@
       {
         default = pkgs.stdenv.mkDerivation
         {
-          pname = "hello";
-          version = "0.0.1";
+          pname = "sds";
+          version = "1.0";
           src = ./.;
           outputs =
           [
