@@ -10,22 +10,6 @@
     for_supported_systems = nixpkgs.lib.genAttrs supported_systems;
   in
   {
-    devShells = for_supported_systems
-    (
-      system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
-        default = pkgs.mkShell
-        {
-          packages =
-          [
-            pkgs.gcc
-          ];
-        };
-      }   
-    );
     packages = for_supported_systems
     (
       system:
@@ -55,7 +39,7 @@
           ''
             mkdir -p $out/bin
             mkdir -p $lib/lib
-            cp build/libsds.a $lib/lib/
+            cp build/libsds.a $out/bin
 
             mkdir -p $dev/include
             cp include/*.h $dev/include/
