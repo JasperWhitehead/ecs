@@ -30,10 +30,7 @@
           ];
           buildPhase =
           ''
-            mkdir -p build
-            gcc -Iinclude -c src/dynamic_array.c -o build/dynamic_array.o -Wno-free-nonheap-object
-            gcc -Iinclude -c src/object_manager.c -o build/object_manager.o -Wno-free-nonheap-object
-            ar rcs build/libsds.a build/dynamic_array.o build/object_manager.o
+            make libsds.a
           '';
           installPhase =
           ''
