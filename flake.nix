@@ -1,5 +1,5 @@
 {
-  description = "test flake";
+  description = "Simple Data Structures";
   inputs =
   {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
