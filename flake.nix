@@ -30,13 +30,13 @@
           ];
           buildPhase =
           ''
-            make libsds.a
+            make build/libsds.a
           '';
           installPhase =
           ''
             mkdir -p $out/bin
             mkdir -p $lib/lib
-            cp build/libsds.a $out/bin
+            cp build/libsds.a $lib/lib
 
             mkdir -p $dev/include
             cp include/*.h $dev/include/
